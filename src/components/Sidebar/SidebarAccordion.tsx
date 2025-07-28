@@ -17,29 +17,21 @@ export const SidebarAccordion: React.FC<SidebarAccordionProps> = ({
   onToggle,
   className = '',
 }) => {
-  const triggerStyles: React.CSSProperties = {
-    cursor: 'pointer',
-    padding: '8px 12px',
-    borderRadius: '8px',
-    transition: 'all 0.2s ease',
-    minHeight: '36px',
-    display: 'flex',
-    alignItems: 'center',
-  };
-
-  const hoverStyles = {
-    backgroundColor: 'rgb(248, 248, 248)',
-  };
   return (
     <li className={className}>
       <div
-        style={triggerStyles}
+        style={{
+          cursor: 'pointer',
+          padding: '8px 12px',
+          borderRadius: '8px',
+          transition: 'all 0.2s ease',
+        }}
         onClick={onToggle}
         onMouseEnter={(e) => {
-          Object.assign(e.currentTarget.style, { ...triggerStyles, ...hoverStyles });
+          e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.05)';
         }}
         onMouseLeave={(e) => {
-          Object.assign(e.currentTarget.style, triggerStyles);
+          e.currentTarget.style.backgroundColor = 'transparent';
         }}
       >
         <Box alignItems="center" gap="sm">
@@ -55,7 +47,6 @@ export const SidebarAccordion: React.FC<SidebarAccordionProps> = ({
             style={{
               transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
               transition: 'transform 0.2s ease',
-              opacity: 0.6,
             }}
           />
         </Box>
@@ -68,7 +59,6 @@ export const SidebarAccordion: React.FC<SidebarAccordionProps> = ({
           style={{
             paddingLeft: '32px',
             marginTop: '4px',
-            gap: '2px',
           }}
         >
           {section.items.map((item) => (
@@ -80,7 +70,6 @@ export const SidebarAccordion: React.FC<SidebarAccordionProps> = ({
               style={{
                 padding: '6px 12px',
                 fontSize: '13px',
-                minHeight: '32px',
               }}
             >
               {item.label}

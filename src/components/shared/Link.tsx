@@ -30,34 +30,25 @@ export const Link: React.FC<LinkProps> = ({
     lineHeight: '21px',
     transition: 'all 0.2s ease',
     position: 'relative',
-    minHeight: '36px',
     ...style,
   };
 
   const hoverStyles = {
-    backgroundColor: 'rgb(248, 248, 248)',
+    backgroundColor: 'rgba(0, 0, 0, 0.05)',
   };
 
-  const isActive = className.includes('active');
-  const activeStyles = {
-    backgroundColor: 'rgb(254, 242, 242)',
-    color: 'rgb(185, 28, 28)',
-  };
   return (
     <a
       href={href}
       className={`link link--${variant} ${className}`}
-      style={isActive ? { ...baseStyles, ...activeStyles } : baseStyles}
+      style={baseStyles}
       target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer' : undefined}
       onMouseEnter={(e) => {
-        if (!isActive) {
-          Object.assign(e.currentTarget.style, { ...baseStyles, ...hoverStyles });
-        }
+        Object.assign(e.currentTarget.style, hoverStyles);
       }}
       onMouseLeave={(e) => {
-        const finalStyles = isActive ? { ...baseStyles, ...activeStyles } : baseStyles;
-        Object.assign(e.currentTarget.style, finalStyles);
+        Object.assign(e.currentTarget.style, baseStyles);
       }}
     >
       {children}

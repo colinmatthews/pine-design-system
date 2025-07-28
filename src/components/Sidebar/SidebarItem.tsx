@@ -12,17 +12,12 @@ export const SidebarItem: React.FC<SidebarItemProps> = ({
   item,
   className = '',
 }) => {
-  // Simulate active state for Dashboard
-  const isActive = item.id === 'dashboard';
-  const linkClassName = isActive ? 'active' : '';
-
   return (
     <li className={className}>
       <Link
         href={item.href}
         external={item.external}
         variant="plain"
-        className={linkClassName}
       >
         <Icon
           name={item.icon}
