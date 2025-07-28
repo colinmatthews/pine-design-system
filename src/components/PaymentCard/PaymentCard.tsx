@@ -15,9 +15,8 @@ export const PaymentCard: React.FC<PaymentCardProps> = ({
 }) => {
   const cardStyles: React.CSSProperties = {
     height: '250px',
-    backgroundColor: '#ffffff',
-    border: '1px solid #e5e7eb',
-    boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+    backgroundColor: '#f9fafb',
+    border: 'none',
     ...style,
   };
 
@@ -29,41 +28,39 @@ export const PaymentCard: React.FC<PaymentCardProps> = ({
           direction="column" 
           style={{ 
             flex: 1, 
-            padding: '24px 32px',
+            padding: '32px',
             justifyContent: 'center'
           }}
         >
           <h2 style={{
-            fontSize: '20px',
-            fontWeight: '600',
+            fontSize: '24px',
+            fontWeight: '700',
             color: '#111827',
-            marginBottom: '12px',
-            lineHeight: '1.3',
-            margin: '0 0 12px 0',
+            marginBottom: '16px',
+            lineHeight: '1.2',
+            margin: '0 0 16px 0',
           }}>
             Set up Kajabi Payments
           </h2>
           
           <p style={{
             color: '#6b7280',
-            fontSize: '13px',
-            lineHeight: '1.4',
-            marginBottom: '20px',
-            maxWidth: '280px',
-            margin: '0 0 20px 0',
+            fontSize: '14px',
+            lineHeight: '1.5',
+            marginBottom: '24px',
+            maxWidth: '320px',
+            margin: '0 0 24px 0',
           }}>
             Kajabi Payments let you manage payments in one place, offer methods like Apple Pay and Afterpay, automate sales tax, and sync with QuickBooks or Xero.
           </p>
           
-          <Box direction="row" alignItems="center" gap="sm">
+          <Box direction="row" alignItems="center" gap="md">
             <Button 
               variant="primary"
               style={{
                 backgroundColor: '#111827',
-                padding: '6px 16px',
+                padding: '8px 24px',
                 fontWeight: '500',
-                fontSize: '13px',
-                borderRadius: '6px',
               }}
             >
               Take me there
@@ -76,7 +73,6 @@ export const PaymentCard: React.FC<PaymentCardProps> = ({
                 padding: '0',
                 height: 'auto',
                 fontWeight: '500',
-                fontSize: '13px',
               }}
             >
               <Box direction="row" alignItems="center" gap="xs">
@@ -92,7 +88,6 @@ export const PaymentCard: React.FC<PaymentCardProps> = ({
                 padding: '0',
                 height: 'auto',
                 fontWeight: '500',
-                fontSize: '13px',
               }}
             >
               Dismiss
@@ -107,106 +102,13 @@ export const PaymentCard: React.FC<PaymentCardProps> = ({
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            paddingRight: '24px',
-            width: '320px',
+            paddingRight: '32px'
           }}
         >
-          <div style={{ 
-            position: 'relative',
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '8px',
-            width: '280px',
-            height: '160px',
-          }}>
-            {/* Kajabi Logo */}
-            <div style={{
-              backgroundColor: '#000',
-              borderRadius: '12px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gridColumn: 'span 1',
-            }}>
-              <span style={{ color: '#ff4444', fontSize: '24px', fontWeight: 'bold' }}>K</span>
-            </div>
-            
-            {/* Apple Pay */}
-            <div style={{
-              backgroundColor: '#fff',
-              border: '1px solid #e5e7eb',
-              borderRadius: '12px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '14px',
-              fontWeight: '500',
-            }}>
-              🍎 Pay
-            </div>
-            
-            {/* Google Pay */}
-            <div style={{
-              backgroundColor: '#fff',
-              border: '1px solid #e5e7eb',
-              borderRadius: '12px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '14px',
-              fontWeight: '500',
-            }}>
-              G Pay
-            </div>
-            
-            {/* Klarna */}
-            <div style={{
-              backgroundColor: '#ffb3d9',
-              borderRadius: '12px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '12px',
-              fontWeight: '600',
-              color: '#000',
-            }}>
-              klarna.
-            </div>
-            
-            {/* Dollar Sign */}
-            <div style={{
-              backgroundColor: '#22c55e',
-              borderRadius: '12px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '20px',
-              fontWeight: 'bold',
-              color: '#fff',
-            }}>
-              $
-            </div>
-            
-            {/* Visa/Mastercard */}
-            <div style={{
-              backgroundColor: '#fff',
-              border: '1px solid #e5e7eb',
-              borderRadius: '12px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '11px',
-              fontWeight: '600',
-              color: '#1e40af',
-            }}>
-              VISA
-            </div>
-          </div>
-        </Box>
-      </Box>
-    </Card>
-  );
-};
+          <div style={{ position: 'relative' }}>
+            <img
+              src="https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=320&h=180&fit=crop"
+              alt="Payment methods illustration"
               style={{
                 width: '320px',
                 height: '180px',
