@@ -1,5 +1,6 @@
 import './App.css'
 import { Sidebar } from './components/Sidebar'
+import { PaymentCard } from './components/PaymentCard'
 import { mockNavigationData } from './data/mockNavigation'
 
 function App() {
@@ -38,6 +39,11 @@ function App() {
         marginTop: '64px',
         padding: '2rem',
       }}>
+        {/* Payment Card */}
+        <div style={{ marginBottom: '2rem' }}>
+          <PaymentCard />
+        </div>
+        
         <h1 style={{ 
           fontSize: '2rem', 
           fontWeight: '700', 
