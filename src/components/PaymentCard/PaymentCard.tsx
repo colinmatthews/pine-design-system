@@ -1,8 +1,5 @@
 import React from 'react';
-import { Card } from '../shared/Card';
-import { Button } from '../shared/Button';
 import { Box } from '../shared/Box';
-import { Icon } from '../shared/Icon';
 
 export interface PaymentCardProps {
   className?: string;
@@ -22,7 +19,7 @@ export const PaymentCard: React.FC<PaymentCardProps> = ({
   };
 
   return (
-    <Card className={className} style={cardStyles}>
+    <pds-card className={className} style={cardStyles}>
       <Box direction="row" fit style={{ height: '100%' }}>
         {/* Content Section */}
         <Box 
@@ -41,62 +38,51 @@ export const PaymentCard: React.FC<PaymentCardProps> = ({
             lineHeight: '1.3',
             margin: '0 0 12px 0',
           }}>
-            Set up Kajabi Payments
+            <pds-text size="lg" weight="semibold">Set up Kajabi Payments</pds-text>
           </h2>
           
-          <p style={{
+          <pds-text size="sm" style={{
             color: '#6b7280',
-            fontSize: '13px',
             lineHeight: '1.4',
             marginBottom: '20px',
             maxWidth: '280px',
             margin: '0 0 20px 0',
           }}>
             Kajabi Payments let you manage payments in one place, offer methods like Apple Pay and Afterpay, automate sales tax, and sync with QuickBooks or Xero.
-          </p>
+          </pds-text>
           
           <Box direction="row" alignItems="center" gap="sm">
-            <Button 
-              variant="primary"
+            <pds-button 
+              variant="solid"
               style={{
-                backgroundColor: '#111827',
                 padding: '6px 16px',
-                fontWeight: '500',
-                fontSize: '13px',
-                borderRadius: '6px',
               }}
             >
               Take me there
-            </Button>
+            </pds-button>
             
-            <Button 
-              variant="ghost"
+            <pds-button 
+              variant="text"
               style={{
-                color: '#374151',
                 padding: '0',
                 height: 'auto',
-                fontWeight: '500',
-                fontSize: '13px',
               }}
             >
               <Box direction="row" alignItems="center" gap="xs">
-                <span>Learn more</span>
-                <Icon name="external-link" size="small" />
+                <pds-text size="sm">Learn more</pds-text>
+                <pds-icon name="external-link" size="sm"></pds-icon>
               </Box>
-            </Button>
+            </pds-button>
             
-            <Button 
-              variant="ghost"
+            <pds-button 
+              variant="text"
               style={{
-                color: '#374151',
                 padding: '0',
                 height: 'auto',
-                fontWeight: '500',
-                fontSize: '13px',
               }}
             >
-              Dismiss
-            </Button>
+              <pds-text size="sm">Dismiss</pds-text>
+            </pds-button>
           </Box>
         </Box>
         
@@ -204,6 +190,6 @@ export const PaymentCard: React.FC<PaymentCardProps> = ({
           </div>
         </Box>
       </Box>
-    </Card>
+    </pds-card>
   );
 };
