@@ -207,3 +207,16 @@ export const PaymentCard: React.FC<PaymentCardProps> = ({
     </Card>
   );
 };
+              style={{
+                width: '320px',
+                height: '180px',
+                objectFit: 'cover',
+                borderRadius: '8px',
+              }}
+            />
+          </div>
+        </Box>
+      </Box>
+    </Card>
+  );
+};
