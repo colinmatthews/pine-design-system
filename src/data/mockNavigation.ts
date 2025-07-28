@@ -1,4 +1,4 @@
-import { NavigationData } from '../types/navigation';
+import type { NavigationData } from '../types/navigation';
 
 export const mockNavigationData: NavigationData = {
   mainItems: [
