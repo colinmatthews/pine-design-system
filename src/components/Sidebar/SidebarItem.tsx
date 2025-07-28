@@ -1,5 +1,5 @@
 import React from 'react';
-import type { NavigationItem } from '../../types/navigation';
+import { NavigationItem } from '../../types/navigation';
 import { Icon } from '../shared/Icon';
 import { Link } from '../shared/Link';
 

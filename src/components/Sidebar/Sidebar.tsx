@@ -1,5 +1,5 @@
 import React from 'react';
-import type { NavigationData, NavigationItem, NavigationSection } from '../../types/navigation';
+import { NavigationData, NavigationItem, NavigationSection } from '../../types/navigation';
 import { useSidebarState } from '../../hooks/useSidebarState';
 import { SidebarItem } from './SidebarItem';
 import { SidebarAccordion } from './SidebarAccordion';
